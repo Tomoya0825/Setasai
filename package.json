@@ -1,0 +1,25 @@
+{
+  "name": "setasai2",
+  "version": "1.0.0",
+  "description": "setasai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.1",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.20.0",
+    "html": "^1.0.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "jsonc-parser": "^2.1.0",
+    "log4js": "^4.5.1",
+    "mysql": "^2.17.1"
+  }
+}
