@@ -2,9 +2,11 @@
   "name": "setasai2",
   "version": "1.0.0",
   "description": "setasai",
-  "main": "index.js",
+  "main": "server.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "sudo nodejs setasaiServer.js",
+    "start": "sudo pm2 start pm2_setasaiServer.yml",
+    "stop": "sudo pm2 stop pm2_setasaiServer.yml"
   },
   "author": "",
   "license": "ISC",

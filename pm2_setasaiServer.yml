@@ -1,0 +1,4 @@
+name: setasaiServer
+script: setasaiServer.js
+instances: max
+exec_mode : cluster

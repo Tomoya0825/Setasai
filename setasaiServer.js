@@ -65,6 +65,13 @@ app.use(function(err,req,res,next){
     }
 });
 
+process.on('uncaughtException', ex=>{
+    logger.fatal(ex);
+});
+process.on('unhandledRejection', ex=>{
+    logger.fatal(ex);
+}); //エラーの処理もれはfatalで記録
+
 //ufwなどで 443ポート開放済み必須 (実行にroot権限必須)
 https.createServer({
     key: fs.readFileSync(serverconf['certificate_file']['key']),
@@ -84,6 +91,8 @@ error   サーバ処理エラー 基本500返す
 warn    へんなリクエスト投げられたとき 基本400返す
 indo    SQLの履歴(squery内部でとっている)
 */
+
+logger.trace("Server Start");
 
 
 //auth_code生成用 I i l 1 O o 0 J j は見ずらいかもしんないので使わない
